@@ -21,7 +21,7 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   gap: 1.5rem;
 }
 html {
-  font-size: 63%;
+  font-size: 62.5%; // base 10px
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
@@ -136,7 +136,7 @@ $max-xlarge: "max-width: 1100px";
   }
 }
 body {
-    height: 1000px;
+  height: 1000px;
 }
 @media ($min-med) {
 }
