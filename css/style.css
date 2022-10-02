@@ -11,7 +11,7 @@
 }
 
 html {
-  font-size: 63%;
+  font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
@@ -79,6 +79,60 @@ html::-webkit-scrollbar-thumb {
   display: none;
 }
 
+.search-form {
+  position: fixed;
+  left: 0;
+  top: 0;
+  border: 0.2rem solid #10221b;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+.search-form.active {
+  display: flex;
+}
+.search-form form {
+  width: 90%;
+  height: 4rem;
+  padding: 0 2rem 2rem;
+  border-bottom: 0.3rem solid #fff;
+}
+.search-form #search-box {
+  color: #fff;
+  width: 100%;
+  height: 3rem;
+  font-size: 2rem;
+  background-color: transparent;
+}
+.search-form #search-box::-moz-placeholder {
+  padding-left: 2rem;
+  color: #aaa;
+}
+.search-form #search-box:-ms-input-placeholder {
+  padding-left: 2rem;
+  color: #aaa;
+}
+.search-form #search-box::placeholder {
+  padding-left: 2rem;
+  color: #aaa;
+}
+.search-form #close-search {
+  position: fixed;
+  right: 3rem;
+  top: 8rem;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 6rem;
+}
+.search-form #close-search:hover {
+  color: #219150;
+}
+
 @media (max-width: 767px) {
   .header {
     position: relative;
@@ -117,6 +171,22 @@ html::-webkit-scrollbar-thumb {
     font-size: 3rem;
   }
 }
-body {
-  height: 1000px;
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+    scroll-padding-top: 7rem;
+  }
+}
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .heading {
+    font-size: 3rem;
+  }
 }/*# sourceMappingURL=style.css.map */
