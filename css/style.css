@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 63%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #10221b;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  margin-right: auto;
+  font-size: 2.5rem;
+  color: #10221b;
+}
+.header .logo i {
+  color: #219150;
+}
+.header .links #cross {
+  display: none;
+}
+.header .links a {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+  color: #10221b;
+  position: relative;
+}
+.header .links a:hover {
+  color: #219150;
+}
+.header .links a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #219150;
+}
+.header .icons * {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+  color: #10221b;
+}
+.header .icons *:hover {
+  color: #219150;
+}
+.header .icons .menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .header {
+    position: relative;
+  }
+  .header #menu {
+    display: inline-block;
+  }
+  .header .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 1000px;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+    width: 48%;
+    height: 100%;
+  }
+  .header .links #cross {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    font-size: 5rem;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  .header .links.active {
+    left: 0px;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  }
+  .header .links a {
+    margin: 1.5rem 0;
+    font-size: 3rem;
+  }
+}
+body {
+  height: 1000px;
+}/*# sourceMappingURL=style.css.map */
