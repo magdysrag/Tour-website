@@ -143,11 +143,7 @@ html::-webkit-scrollbar-thumb {
   color: #dd538d;
 }
 
-section.main-section {
-  background-image: url(/images/home-bg-1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+section.view-section {
   position: absolute;
   left: 0;
   top: 0;
@@ -159,47 +155,85 @@ section.main-section {
   height: 100vh;
   padding: 0 9%;
 }
-section.main-section .main {
+section.view-section div {
+  display: none;
+}
+section.view-section div.active {
+  display: block;
+}
+section.view-section .view-1,
+section.view-section .view-2,
+section.view-section .view-3 {
   width: 50rem;
 }
-section.main-section .main h2 {
+section.view-section .view-1 p.background,
+section.view-section .view-2 p.background,
+section.view-section .view-3 p.background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #dd538d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+section.view-section .view-1.view-2,
+section.view-section .view-2.view-2,
+section.view-section .view-3.view-2 {
+  margin-right: auto;
+}
+section.view-section .view-1 h2,
+section.view-section .view-2 h2,
+section.view-section .view-3 h2 {
   font-size: 6rem;
   color: #dd538d;
+  text-transform: uppercase;
 }
-section.main-section .main span {
+section.view-section .view-1 span,
+section.view-section .view-2 span,
+section.view-section .view-3 span {
   display: block;
   font-size: 4rem;
 }
-section.main-section .main p {
+section.view-section .view-1 p,
+section.view-section .view-2 p,
+section.view-section .view-3 p {
   font-size: 1.7rem;
   padding: 1.5rem 0 2.5rem;
 }
-section.main-section .main .btn {
+section.view-section .view-1 .btn,
+section.view-section .view-2 .btn,
+section.view-section .view-3 .btn {
   border: 0.2rem solid #10221b;
   padding: 1rem 1.5rem;
   color: #10221b;
   font-size: 1.7rem;
 }
-section.main-section .main .btn:hover {
+section.view-section .view-1 .btn:hover,
+section.view-section .view-2 .btn:hover,
+section.view-section .view-3 .btn:hover {
   background-color: #10221b;
   color: #dd538d;
   font-weight: 500;
   font-size: 2rem;
 }
-section.main-section i {
+section.view-section i {
   font-size: 4rem;
   cursor: pointer;
   color: #10221b;
 }
-section.main-section i.next {
+section.view-section i.next {
   position: absolute;
   right: 5rem;
 }
-section.main-section i.prev {
+section.view-section i.prev {
   position: absolute;
   left: 5rem;
 }
-section.main-section i:hover {
+section.view-section i:hover {
   color: #dd538d;
 }
 
