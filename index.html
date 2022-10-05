@@ -8,7 +8,8 @@
     <!-- font awsome cdn link  -->
     <link rel="stylesheet" href="css\all.css" />
     <link rel="stylesheet" href="css\all.min.css" />
-    <!-- https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css -->
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/test.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -52,40 +53,272 @@
         <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
       </form>
     </div>
-    <section class="view-section">
-      <div class="view-1 ">
-        <p class="background" style="background-image: url(/images/home-bg-1.jpg);"></p>
-        <span>never stop</span>
-        <h2>exploring</h2>
-        <p>
-          lLorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-          laudantium quae non. Enim provident sed quos libero. Culpa, soluta id!
-        </p>
-        <a href="#" class="btn">get started</a>
+    <section id="home" class="home">
+      <div class="view-section">
+        <div class="view view-1 active">
+          <p
+            class="background"
+            style="background-image: url(/images/home-bg-1.jpg);"
+          ></p>
+          <span>never stop</span>
+          <h2>exploring</h2>
+          <p>
+            lLorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            laudantium quae non. Enim provident sed quos libero. Culpa, soluta
+            id!
+          </p>
+          <a href="#" class="btn">get started</a>
+        </div>
+        <div class="view view-2">
+          <p
+            class="background"
+            style="background-image: url(/images/home-bg-2.jpg);"
+          ></p>
+          <span>explore the</span>
+          <h2>new world</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            laudantium quae non. Enim provident sed quos libero. Culpa, soluta
+            id!
+          </p>
+          <a href="#" class="btn">get started</a>
+        </div>
+        <div class="view view-3">
+          <p
+            class="background"
+            style="background-image: url(/images/home-bg-3.jpg);"
+          ></p>
+          <span>make tour</span>
+          <h2>amazing</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            laudantium quae non. Enim provident sed quos libero. Culpa, soluta
+            id!
+          </p>
+          <a href="#" class="btn">get started</a>
+        </div>
+        <i class="next fa-solid fa-arrow-right-long"></i>
+        <i class="prev fa-solid fa-arrow-left-long"></i>
+        <ul>
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
-      <div class="view-2 ">
-        <p class="background" style="background-image: url(/images/home-bg-2.jpg);"></p>
-        <span>explore the</span>
-        <h2>new world</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-          laudantium quae non. Enim provident sed quos libero. Culpa, soluta id!
-        </p>
-        <a href="#" class="btn">get started</a>
-      </div>
-      <div class="view-3  active">
-        <p class="background" style="background-image: url(/images/home-bg-3.jpg);"></p>
-        <span>make tour</span>
-        <h2>amazing</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-          laudantium quae non. Enim provident sed quos libero. Culpa, soluta id!
-        </p>
-        <a href="#" class="btn">get started</a>
-      </div>
-      <i class="next fa-solid fa-arrow-right-long"></i>
-      <i class="prev fa-solid fa-arrow-left-long"></i>
     </section>
-    <script src="js/view.js"></script>
+    <section id="category" class="category">
+      <h1 class="heading">adventure idea!</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="images/category-1.jpg" alt="" />
+          <h3>bungee jump</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum,
+            id.
+          </p>
+          <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <img src="images/category-2.jpg" alt="" />
+          <h3>zip lines</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum,
+            id.
+          </p>
+          <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <img src="images/category-3.jpg" alt="" />
+          <h3>Canoeing</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum,
+            id.
+          </p>
+          <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <img src="images/category-4.jpg" alt="" />
+          <h3>kayaking</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum,
+            id.
+          </p>
+          <a href="#" class="btn">read more</a>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <div class="img">
+        <img src="/images/about-img.jpg" alt="" />
+      </div>
+      <div class="info">
+        <h3>Memorable Outdoor Experiences</h3>
+        <p>
+          Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Neque
+          Voluptates Corrupti Natus Necessitatibus Beatae Voluptatibus, Deserunt
+          Quo Soluta Minima Libero Laborum, Corporis Error Esse Vitae Placeat
+          Blanditiis Reiciendis Vel? Minima.
+          <br />
+          <br />
+          <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum
+          quidem, laboriosam in corporis magni nesciunt alias ipsam
+          exercitationem! Minus.
+        </p>
+        <a href="#" class="btn">about more</a>
+      </div>
+    </section>
+
+    <!-- ********************* -->
+
+    <section class="shop" id="shop">
+      <h1 class="heading">featured products</h1>
+
+      <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <div class="image">
+              <img src="images/product-1.jpg" alt="" />
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+              </div>
+            </div>
+            <div class="content">
+              <h3>survival kits</h3>
+              <div class="price">$5.00 - $25.00</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <img src="images/product-2.jpg" alt="" />
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+              </div>
+            </div>
+            <div class="content">
+              <h3>survival kits</h3>
+              <div class="price">$5.00 - $25.00</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <img src="images/product-3.jpg" alt="" />
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+              </div>
+            </div>
+            <div class="content">
+              <h3>survival kits</h3>
+              <div class="price">$5.00 - $25.00</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <img src="images/product-4.jpg" alt="" />
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+              </div>
+            </div>
+            <div class="content">
+              <h3>survival kits</h3>
+              <div class="price">$5.00 - $25.00</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <img src="images/product-5.jpg" alt="" />
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+              </div>
+            </div>
+            <div class="content">
+              <h3>survival kits</h3>
+              <div class="price">$5.00 - $25.00</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <img src="images/product-6.jpg" alt="" />
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+              </div>
+            </div>
+            <div class="content">
+              <h3>survival kits</h3>
+              <div class="price">$5.00 - $25.00</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="next swiper-button-next"></div>
+        <div class="prev swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

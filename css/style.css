@@ -27,6 +27,29 @@ html::-webkit-scrollbar-thumb {
   background-color: #10221b;
 }
 
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  margin: 2.5rem auto;
+  color: #10221b;
+}
+
+.btn {
+  border: 0.2rem solid #10221b;
+  border-width: 0.1rem;
+  padding: 1rem 2rem;
+  color: #10221b;
+  font-size: 1.8rem;
+}
+.btn:hover {
+  background-color: #dd538d;
+  font-size: 2rem;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -37,6 +60,9 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.header.scrol {
+  background-color: #fff;
 }
 .header .logo {
   margin-right: auto;
@@ -81,13 +107,13 @@ html::-webkit-scrollbar-thumb {
 }
 
 .search-form {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
   display: none;
-  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1000;
 }
 .search-form.active {
@@ -143,32 +169,36 @@ html::-webkit-scrollbar-thumb {
   color: #dd538d;
 }
 
-section.view-section {
+.home {
+  height: 100vh;
+}
+.home div.view-section {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex: 1;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
   height: 100vh;
   padding: 0 9%;
 }
-section.view-section div {
+.home div.view-section div {
   display: none;
 }
-section.view-section div.active {
+.home div.view-section div.active {
   display: block;
 }
-section.view-section .view-1,
-section.view-section .view-2,
-section.view-section .view-3 {
+.home div.view-section .view-1,
+.home div.view-section .view-2,
+.home div.view-section .view-3 {
   width: 50rem;
 }
-section.view-section .view-1 p.background,
-section.view-section .view-2 p.background,
-section.view-section .view-3 p.background {
+.home div.view-section .view-1 p.background,
+.home div.view-section .view-2 p.background,
+.home div.view-section .view-3 p.background {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -180,60 +210,177 @@ section.view-section .view-3 p.background {
   height: 100vh;
   z-index: -1;
 }
-section.view-section .view-1.view-2,
-section.view-section .view-2.view-2,
-section.view-section .view-3.view-2 {
+.home div.view-section .view-1.view-2,
+.home div.view-section .view-2.view-2,
+.home div.view-section .view-3.view-2 {
   margin-right: auto;
 }
-section.view-section .view-1 h2,
-section.view-section .view-2 h2,
-section.view-section .view-3 h2 {
+.home div.view-section .view-1 h2,
+.home div.view-section .view-2 h2,
+.home div.view-section .view-3 h2 {
   font-size: 6rem;
   color: #dd538d;
   text-transform: uppercase;
 }
-section.view-section .view-1 span,
-section.view-section .view-2 span,
-section.view-section .view-3 span {
+.home div.view-section .view-1 span,
+.home div.view-section .view-2 span,
+.home div.view-section .view-3 span {
   display: block;
   font-size: 4rem;
 }
-section.view-section .view-1 p,
-section.view-section .view-2 p,
-section.view-section .view-3 p {
+.home div.view-section .view-1 p,
+.home div.view-section .view-2 p,
+.home div.view-section .view-3 p {
   font-size: 1.7rem;
   padding: 1.5rem 0 2.5rem;
 }
-section.view-section .view-1 .btn,
-section.view-section .view-2 .btn,
-section.view-section .view-3 .btn {
-  border: 0.2rem solid #10221b;
-  padding: 1rem 1.5rem;
-  color: #10221b;
-  font-size: 1.7rem;
-}
-section.view-section .view-1 .btn:hover,
-section.view-section .view-2 .btn:hover,
-section.view-section .view-3 .btn:hover {
-  background-color: #10221b;
-  color: #dd538d;
-  font-weight: 500;
-  font-size: 2rem;
-}
-section.view-section i {
+.home div.view-section i {
   font-size: 4rem;
   cursor: pointer;
   color: #10221b;
 }
-section.view-section i.next {
+.home div.view-section i.next {
   position: absolute;
   right: 5rem;
 }
-section.view-section i.prev {
+.home div.view-section i.prev {
   position: absolute;
   left: 5rem;
 }
-section.view-section i:hover {
+.home div.view-section i:hover {
+  color: #dd538d;
+}
+.home div.view-section ul {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-flow: row;
+}
+.home div.view-section ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 0.3rem solid;
+  border-color: #10221b;
+  background-color: #fff;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.home div.view-section ul li.active {
+  border: none;
+  background-color: #dd538d;
+}
+
+.category .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  gap: 1.5rem;
+}
+.category .box-container .box {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.category .box-container .box p {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.category .box-container .box img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  margin-top: 2rem;
+}
+
+.about {
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  gap: 1.5rem;
+  gap: 3.5rem;
+}
+.about .img {
+  width: 90%;
+  position: relative;
+  padding-bottom: 5rem;
+}
+.about .img img {
+  box-shadow: 4rem 4rem 0px 0px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+}
+.about .info h3 {
+  font-size: 3rem;
+  color: #dd538d;
+}
+.about .info p {
+  margin: 2rem 0;
+  padding: 1rem 0;
+  font-size: 1.7rem;
+}
+
+.shop .slide {
+  border: 0.2rem solid #10221b;
+}
+.shop .slide:hover .image .icons {
+  transform: translateY(0);
+}
+.shop .slide .image {
+  position: relative;
+  overflow: hidden;
+  height: 30rem;
+  width: 100%;
+}
+.shop .slide .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.shop .slide .image .icons {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  text-align: center;
+  z-index: 10;
+  transform: translateY(7rem);
+}
+.shop .slide .image .icons a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  background: #10221b;
+  color: #fff;
+  margin: 0 0.2rem;
+}
+.shop .slide .image .icons a:hover {
+  background: #dd538d;
+}
+.shop .slide .content {
+  padding: 1rem 0;
+  text-align: center;
+}
+.shop .slide .content h3 {
+  font-size: 2rem;
+  color: #10221b;
+}
+.shop .slide .content .price {
+  padding: 1rem 0;
+  padding-top: 0.5rem;
+  font-size: 2rem;
+  color: #dd538d;
+}
+.shop .slide .content .stars i {
+  font-size: 1.7rem;
+  color: #dd538d;
+}
+.shop .next, .shop .prev {
   color: #dd538d;
 }
 
@@ -280,10 +427,21 @@ section.view-section i:hover {
     font-size: 55%;
     scroll-padding-top: 7rem;
   }
+  .view-section .view {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .about .info {
+    text-align: center;
+    margin-top: 3rem;
+  }
 }
 @media (max-width: 1200px) {
   .header {
     padding: 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
   }
 }
 @media (max-width: 450px) {
