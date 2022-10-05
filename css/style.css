@@ -172,35 +172,14 @@ section {
 .home {
   height: 100vh;
 }
-.home div.view-section {
+.home .view-section .view {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100vh;
-  padding: 0 9%;
-}
-.home div.view-section div {
-  display: none;
-}
-.home div.view-section div.active {
-  display: block;
-}
-.home div.view-section .view-1,
-.home div.view-section .view-2,
-.home div.view-section .view-3 {
-  width: 50rem;
-}
-.home div.view-section .view-1 p.background,
-.home div.view-section .view-2 p.background,
-.home div.view-section .view-3 p.background {
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover !important;
   background-position: center;
   background-color: #dd538d;
   position: absolute;
@@ -209,48 +188,68 @@ section {
   width: 100%;
   height: 100vh;
   z-index: -1;
+  padding: 0 9%;
 }
-.home div.view-section .view-1.view-2,
-.home div.view-section .view-2.view-2,
-.home div.view-section .view-3.view-2 {
-  margin-right: auto;
+.home .view-section .view-1 {
+  background-image: url(/images/home-bg-1.jpg);
 }
-.home div.view-section .view-1 h2,
-.home div.view-section .view-2 h2,
-.home div.view-section .view-3 h2 {
+.home .view-section .view-1 .view-content {
+  margin-left: auto !important;
+}
+.home .view-section .view-2 {
+  background-image: url(/images/home-bg-2.jpg);
+}
+.home .view-section .view-2 .view-content {
+  margin-right: auto !important;
+}
+.home .view-section .view-3 {
+  background-image: url(/images/home-bg-3.jpg);
+}
+.home .view-section .view-3 .view-content {
+  margin-left: auto !important;
+}
+.home .view-section .view {
+  display: none;
+}
+.home .view-section .view.active {
+  display: block;
+}
+.home .view-section .view .view-content {
+  text-align: left;
+  width: 52rem;
+  margin-top: 18rem;
+}
+.home .view-section .view .view-content h2 {
   font-size: 6rem;
   color: #dd538d;
   text-transform: uppercase;
 }
-.home div.view-section .view-1 span,
-.home div.view-section .view-2 span,
-.home div.view-section .view-3 span {
+.home .view-section .view .view-content span {
   display: block;
   font-size: 4rem;
 }
-.home div.view-section .view-1 p,
-.home div.view-section .view-2 p,
-.home div.view-section .view-3 p {
+.home .view-section .view .view-content p {
   font-size: 1.7rem;
   padding: 1.5rem 0 2.5rem;
 }
-.home div.view-section i {
+.home .view-section i {
   font-size: 4rem;
   cursor: pointer;
   color: #10221b;
-}
-.home div.view-section i.next {
   position: absolute;
-  right: 5rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.home div.view-section i.prev {
-  position: absolute;
-  left: 5rem;
+.home .view-section i.next {
+  right: 4rem;
 }
-.home div.view-section i:hover {
+.home .view-section i.prev {
+  left: 4rem;
+}
+.home .view-section i:hover {
   color: #dd538d;
 }
-.home div.view-section ul {
+.home ul {
   position: absolute;
   bottom: 2rem;
   left: 50%;
@@ -258,7 +257,7 @@ section {
   display: flex;
   flex-flow: row;
 }
-.home div.view-section ul li {
+.home ul li {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -271,7 +270,7 @@ section {
   margin-left: 1rem;
   cursor: pointer;
 }
-.home div.view-section ul li.active {
+.home ul li.active {
   border: none;
   background-color: #dd538d;
 }
@@ -380,11 +379,16 @@ section {
   font-size: 1.7rem;
   color: #dd538d;
 }
-.shop .next, .shop .prev {
+.shop .next,
+.shop .prev {
   color: #dd538d;
 }
 
 @media (max-width: 767px) {
+  html {
+    font-size: 40%;
+    scroll-padding-top: 7rem;
+  }
   .header {
     position: relative;
   }
@@ -424,12 +428,17 @@ section {
 }
 @media (max-width: 991px) {
   html {
-    font-size: 55%;
+    font-size: 50%;
     scroll-padding-top: 7rem;
   }
-  .view-section .view {
-    margin: 0 auto;
-    text-align: center;
+  .home .view-section .view {
+    background-position: right !important;
+  }
+  .home .view-section .view .view-content {
+    width: 78%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center !important;
   }
   .about .info {
     text-align: center;
