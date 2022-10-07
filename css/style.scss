@@ -42,6 +42,12 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   height: $hieght;
   border-radius: 50%;
 }
+@mixin price {
+  padding: 1rem 0;
+  padding-top: 0.5rem;
+  font-size: 2rem;
+  color: $pink;
+}
 html {
   font-size: 62.5%; // base 10px
   overflow-x: hidden;
@@ -67,6 +73,7 @@ section {
   color: $black;
 }
 .btn {
+  cursor: pointer;
   border: $border;
   border-width: 0.1rem;
   padding: 1rem 2rem;
@@ -187,20 +194,17 @@ section {
   }
 }
 .home {
-  height: 100vh;
+  // height: 100vh;
+  padding: 0;
   .view-section {
     .view {
-      @include cover();
       background-repeat: no-repeat;
       background-size: cover !important;
       background-position: center;
       background-color: $pink;
-      position: absolute;
-      left: 0;
-      top: 0;
       width: 100%;
       height: 100vh;
-      z-index: -1;
+      z-index: -100;
       &-1 {
         background-image: url(/images/home-bg-1.jpg);
         .view-content {
@@ -222,7 +226,7 @@ section {
       & {
         display: none;
         &.active {
-          display: block;
+          display: flex;
         }
       }
 
@@ -263,25 +267,25 @@ section {
         color: $pink;
       }
     }
-  }
-  ul {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-flow: row;
-    li {
-      @include list-reset();
-      @include polits(3rem, 3rem);
-      border: 0.3rem solid;
-      border-color: $black;
-      background-color: $white;
-      margin-left: 1rem;
-      cursor: pointer;
-      &.active {
-        border: none;
-        background-color: $pink;
+    ul {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-flow: row;
+      li {
+        @include list-reset();
+        @include polits(3rem, 3rem);
+        border: 0.3rem solid;
+        border-color: $black;
+        background-color: $white;
+        margin-left: 1rem;
+        cursor: pointer;
+        &.active {
+          border: none;
+          background-color: $pink;
+        }
       }
     }
   }
@@ -377,12 +381,7 @@ section {
         font-size: 2rem;
         color: $black;
       }
-      .price {
-        padding: 1rem 0;
-        padding-top: 0.5rem;
-        font-size: 2rem;
-        color: $pink;
-      }
+      @include price();
       .stars {
         i {
           font-size: 1.7rem;
@@ -398,7 +397,222 @@ section {
     color: $pink;
   }
 }
-
+.package {
+  background-color: $light-bg;
+  .box-container {
+    @include grid(32rem);
+    .box {
+      padding: 2rem;
+      text-align: center;
+      border: $border;
+      border-radius: 0.6rem;
+      .price {
+        @include price();
+      }
+      &:hover {
+        background-color: $black;
+        color: $white;
+        .btn {
+          background-color: $pink;
+          color: $white;
+        }
+      }
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.5rem;
+        width: 75%;
+        margin: 1rem auto 0;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 0.6rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+.reviews {
+  .box-container {
+    // @include grid(32rem);
+    .box {
+      height: 100%;
+      p {
+        background-color: $light-bg;
+        border-radius: 0.6rem;
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-bottom: 2rem;
+        padding: 2rem;
+        line-height: 2;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -3.8rem;
+          left: 0;
+          border: 2rem solid;
+          border-color: $light-bg transparent transparent transparent;
+        }
+      }
+      .info-img {
+        display: flex;
+        img {
+          width: 7rem;
+          height: 7rem;
+          margin: 0 1rem 0;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.offer {
+  background-color: $light-bg;
+  .box-container {
+    @include grid(32rem);
+    .box {
+      border: $border;
+      border-radius: 0.6rem;
+      text-align: center;
+      padding: 2rem;
+      &:hover {
+        background-color: $black;
+        color: $white;
+        .btn {
+          background-color: $pink;
+        }
+        img {
+          filter: invert(1);
+        }
+      }
+      img {
+        max-width: 100%;
+        height: 10rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1.5rem;
+        padding: 2rem 0;
+        line-height: 2;
+        width: 80%;
+        margin: 0 auto 0.5rem;
+      }
+      h3 {
+        font-size: 2rem;
+        margin-top: 1rem;
+        color: $pink;
+      }
+    }
+  }
+}
+.blogs {
+  .box-container {
+    .box {
+      margin-bottom: 2rem;
+      // border: $border;
+      height: 100%;
+      .image {
+        img {
+          max-width: 100%;
+          height: 25rem;
+          border-radius: 0.6rem;
+        }
+        text-align: center;
+        .user {
+          display: inline-block;
+          background-color: $black;
+          color: $white;
+          cursor: pointer;
+          padding: 2rem;
+          position: relative;
+          top: -3.8rem;
+          border-radius: 0.6rem;
+          i {
+            display: inline-block;
+            padding-left: 1rem;
+            color: $pink;
+            font-size: 1.5rem;
+            font-weight: normal;
+            span {
+              color: $white;
+              margin-left: 1rem;
+            }
+            cursor: pointer;
+            &:hover span {
+              color: $pink;
+            }
+          }
+        }
+      }
+      .info {
+        margin-bottom: 2.5rem;
+        text-align: center;
+        h3 {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.6rem;
+          margin-bottom: 3rem;
+        }
+        .btn {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+.subscribe {
+  background-color: $light-bg;
+  .content {
+    text-align: center;
+    .heading {
+      font-size: 5rem;
+    }
+    p {
+      font-size: 1.8rem;
+      line-height: 2;
+    }
+  }
+  .form {
+    box-flex-group: $black;
+    margin: 1rem;
+    position: relative;
+    border: $border;
+    border-radius: 5rem;
+    z-index: 5;
+    input[type="email"] {
+      border-radius: 5rem;
+      width: 100%;
+      height: 7rem;
+      padding: 2rem;
+    }
+    input[type="submit"] {
+      position: absolute;
+      right: 3rem;
+      top: 1rem;
+      border-radius: 5rem;
+      background-color: $black;
+      color: $white;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      &:hover {
+        background-color: $white;
+        color: $black;
+        border: $border;
+      }
+    }
+  }
+}
+.clients {
+  img {
+    height: 12rem;
+  }
+}
 //media Quary
 $max-mopile: "max-width: 767px";
 $min-mopile: "min-width: 767px";
@@ -414,7 +628,7 @@ $max-xlarge: "max-width: 1200px";
     scroll-padding-top: 7rem;
   }
   .header {
-    position: relative;
+    // position: relative;
     #menu {
       display: inline-block;
     }
@@ -456,7 +670,7 @@ $max-xlarge: "max-width: 1200px";
 @media ($max-large) {
   html {
     font-size: 50%;
-    scroll-padding-top: 7rem;
+    // scroll-padding-top: 7rem;
   }
   .home {
     .view-section {
@@ -483,6 +697,9 @@ $max-xlarge: "max-width: 1200px";
 @media ($max-xlarge) {
   .header {
     padding: 2rem;
+    &.scrol {
+      background-color: $white;
+    }
   }
   section {
     padding: 3rem 2rem;

@@ -64,7 +64,7 @@ window.addEventListener("scroll", removeIcon);
 window.addEventListener("scroll", backGround);
 function backGround() {
   header.classList.remove("scrol");
-  if (window.scrollY > 0) {
+  if (window.scrollY > 100) {
     header.classList.add("scrol");
   } else {
     header.classList.remove("scrol");
@@ -104,3 +104,60 @@ var swiper = new Swiper(".product-slider", {
     },
   },
 });
+
+var swiper = new Swiper(".review-slider ", {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
+});
+;
+
+
+var swiper = new Swiper(".blogs-slider ", {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
+});
+;
+var swiper = new Swiper(".clients-slider ", {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    760: {
+      slidesPerView: 3,
+    },
+    1000: {
+      slidesPerView: 4,
+    },
+  },
+});
+;
