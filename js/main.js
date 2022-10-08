@@ -64,7 +64,7 @@ window.addEventListener("scroll", removeIcon);
 window.addEventListener("scroll", backGround);
 function backGround() {
   header.classList.remove("scrol");
-  if (window.scrollY > 100) {
+  if (window.scrollY > 10) {
     header.classList.add("scrol");
   } else {
     header.classList.remove("scrol");
